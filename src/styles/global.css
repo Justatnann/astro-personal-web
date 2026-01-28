@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Dot";
+  src: url(/fonts/dotmatrix.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archimotov";
+  src: url(/fonts/archimotov.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archimotov-Bold";
+  src: url(/fonts/archimotov-bold.otf) format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
