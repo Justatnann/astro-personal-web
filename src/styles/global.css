@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --font-dot: "Dot", monospace;
+  --font-archimotov: "Archimotov", sans-serif;
+  --font-archimotov-bold: "Archimotov-Bold", sans-serif;
+}
+
 @font-face {
   font-family: "Dot";
   src: url(/fonts/dotmatrix.ttf) format("truetype");
