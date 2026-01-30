@@ -3,41 +3,47 @@ import "../styles/global.css";
 ---
 
 <div id="container">
-  <main>
+  <main class="gap-10 pt-10">
     <section id="card">
       <h1>An Intr0duct1on</h1>
     </section>
 
-    <div class="grid grid-cols-4 gap-0.5 px-10">
-      <div
-        class="font-archimotov bg-white/50 backdrop-blur-xs border border-white/20 rounded-xl p-6"
-      >
-        Hello! I'm Justatnann, a passionate web developer and tech enthusiast. I
-        love creating beautiful and functional websites that provide great user
-        experiences. When I'm not coding, you can find me exploring new
-        technologies, reading about the latest trends in web development, or
-        working on personal projects.
+    <div class="grid grid-rows-2 gap-0.5 px-16 mx-100 my-10">
+      <div class="flex gap-0.5">
+        <div
+          class="flex-auto place-items-center bg-zinc-700 border border-white/20 rounded-tl-4xl overflow-hidden"
+        >
+          <img
+            class="w-200 h-full object-cover"
+            src="/src/assets/photo.png"
+            alt="Justatnann Profile Picture"
+          />
+        </div>
+        <div
+          class="relative font-archimotov text-xl text-right place-content-center flex-auto bg-white border border-white/20 p-6"
+        >
+          Hello! I'm Justatnann, a passionate web developer and tech enthusiast.
+          I love creating beautiful and functional websites that provide great
+          user experiences. When I'm not coding, you can find me exploring new
+          technologies, reading about the latest trends in web development, or
+          working on personal projects.
+
+          <div class="absolute right-0 top-0 w-4 h-4 bg-red-600"></div>
+        </div>
       </div>
-      <div
-        class="font-archimotov bg-white/50 backdrop-blur-xs border border-white/20 rounded-xl p-6"
-      >
-        Feel free to browse through my projects and get in touch if you'd like
-        to collaborate or just say hi! I'm always open to new opportunities and
-        connections in the tech community.
-      </div>
-      <div
-        class="font-archimotov bg-white/50 backdrop-blur-xs border border-white/20 rounded-xl p-6"
-      >
-        Feel free to browse through my projects and get in touch if you'd like
-        to collaborate or just say hi! I'm always open to new opportunities and
-        connections in the tech community.
-      </div>
-      <div
-        class="font-archimotov bg-white/50 backdrop-blur-xs border border-white/20 rounded-xl p-6"
-      >
-        Feel free to browse through my projects and get in touch if you'd like
-        to collaborate or just say hi! I'm always open to new opportunities and
-        connections in the tech community.
+      <div class="flex gap-0.5">
+        <div class="font-archimotov flex-2 bg-white border border-white/20 p-6">
+          Feel free to browse through my projects and get in touch if you'd like
+          to collaborate or just say hi! I'm always open to new opportunities
+          and connections in the tech community.
+        </div>
+        <div
+          class="font-archimotov flex-1 bg-white border border-white/20 rounded-br-4xl p-6"
+        >
+          Feel free to browse through my projects and get in touch if you'd like
+          to collaborate or just say hi! I'm always open to new opportunities
+          and connections in the tech community.
+        </div>
       </div>
     </div>
 
@@ -52,8 +58,8 @@ import "../styles/global.css";
         padding: 3rem 4rem;
         border: 2px dotted currentColor;
         border-radius: 12px;
-        background: rgba(255, 255, 255, 0.02);
-        backdrop-filter: blur(6px);
+        background: #ffffff80;
+        backdrop-filter: blur(3px);
       }
       main {
         min-height: 100vh;
