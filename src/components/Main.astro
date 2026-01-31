@@ -3,64 +3,70 @@ import "../styles/global.css";
 ---
 
 <div id="container">
-  <main class="gap-10 pt-10">
+  <main class="pt-10">
     <section id="card">
       <h1>An Intr0duct1on</h1>
     </section>
 
-    <div class="grid grid-rows-2 gap-0.5 px-16 mx-100 my-10">
+    <div
+      class="grid grid-rows-[auto_auto] gap-0.5 mx-10 md:mx-30 lg:mx-20 2xl:mx-70"
+    >
       <div class="flex gap-0.5">
         <div
-          class="flex-auto place-items-center bg-zinc-700 border border-white/20 rounded-tl-4xl overflow-hidden"
+          class="flex-1 place-items-center bg-zinc-700 border border-white/20 rounded-tl-4xl overflow-hidden"
         >
-          <img
-            class="w-200 h-full object-cover"
+          <imgA
+            class="block w-150 h-100 object-cover"
             src="/src/assets/photo.png"
-            alt="Justatnann Profile Picture"
-          />
+            alt="Justatnann Profile Picture"></imgA>
         </div>
         <div
-          class="relative font-archimotov text-xl text-right place-content-center flex-auto bg-white border border-white/20 p-6"
+          class="relative place-content-center flex-3 bg-white border border-white/20 p-6"
         >
-          Hello! I'm Justatnann, a passionate web developer and tech enthusiast.
-          I love creating beautiful and functional websites that provide great
-          user experiences. When I'm not coding, you can find me exploring new
-          technologies, reading about the latest trends in web development, or
-          working on personal projects.
+          <p class="font-archimotov-bold text-6xl text-right">
+            Atnan Ari Anders0n
+          </p>
+          <div class="border mb-1"></div>
+          <p class="font-archimotov text-3xl text-right">
+            Aspiring Mobile Developer
+          </p>
 
           <div class="absolute right-0 top-0 w-4 h-4 bg-red-600"></div>
         </div>
       </div>
-      <div class="flex gap-0.5">
-        <div class="font-archimotov flex-2 bg-white border border-white/20 p-6">
-          Feel free to browse through my projects and get in touch if you'd like
-          to collaborate or just say hi! I'm always open to new opportunities
-          and connections in the tech community.
+
+      <!--Bio and Binary-->
+      <div class="flex gap-0.5 h-fit">
+        <div
+          class="font-archimotov flex-2 text-xl lg:text-2xl text-right bg-white rounded-l-full border border-white/20 p-10"
+        >
+          <p>
+            Hello! I'm Atnan, a passionate mobile developer. I love creating
+            innovative mobile applications that make a difference. When I'm not
+            coding, you can find me exploring the latest tech trends or working
+            on personal projects to sharpen my skills.
+          </p>
+          <div>
+            <div></div>
+          </div>
         </div>
         <div
-          class="font-archimotov flex-1 bg-white border border-white/20 rounded-br-4xl p-6"
+          class="font-archimotov flex-1 text-md lg:text-lg place-content-center text-center bg-white border border-white/20 rounded-br-4xl px-2"
         >
-          Feel free to browse through my projects and get in touch if you'd like
-          to collaborate or just say hi! I'm always open to new opportunities
-          and connections in the tech community.
+          "01101010 01110101 01110011 01110100 00100000 01100001 00100000
+          01100100 01100101 01110110 01100101 01101100 01101111 01110000
+          01100101 01110010 00100000 01110111 01100001 01101110 01101110
+          01100001 01100010 01100101"
         </div>
       </div>
     </div>
 
     <style>
-      #container {
-      }
       h1 {
         font-family: "Dot";
-        font-size: 4rem;
+        font-size: 3rem;
       }
-      #card {
-        padding: 3rem 4rem;
-        border: 2px dotted currentColor;
-        border-radius: 12px;
-        background: #ffffff80;
-        backdrop-filter: blur(3px);
-      }
+
       main {
         min-height: 100vh;
         display: grid;
