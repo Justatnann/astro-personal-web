@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import { Image } from "astro:assets";
+import profilePic from "../assets/photo.png";
 ---
 
 <div id="container">
@@ -9,34 +11,57 @@ import "../styles/global.css";
     </section>
 
     <div
-      class="grid grid-rows-[auto_auto] gap-0.5 mx-10 md:mx-30 lg:mx-20 2xl:mx-70"
+      class="grid grid-rows-[auto_auto] gap-1.5 mx-10 md:mx-30 lg:mx-20 2xl:mx-70"
     >
-      <div class="flex gap-0.5">
+      <div class="flex gap-1.5 items-stretch">
         <div
-          class="flex-1 place-items-center bg-zinc-700 border border-white/20 rounded-tl-4xl overflow-hidden"
+          class="flex-1 bg-zinc-700 border border-white/20 rounded-tl-4xl overflow-hidden"
         >
-          <imgA
-            class="block w-150 h-100 object-cover"
-            src="/src/assets/photo.png"
-            alt="Justatnann Profile Picture"></imgA>
+          <Image
+            class="w-full h-full object-cover"
+            src={profilePic}
+            alt="Justatnann Profile Picture"
+          />
         </div>
-        <div
-          class="relative place-content-center flex-3 bg-white border border-white/20 p-6"
-        >
-          <p class="font-archimotov-bold text-6xl text-right">
-            Atnan Ari Anders0n
-          </p>
-          <div class="border mb-1"></div>
-          <p class="font-archimotov text-3xl text-right">
-            Aspiring Mobile Developer
-          </p>
-
-          <div class="absolute right-0 top-0 w-4 h-4 bg-red-600"></div>
+        <div class="flex-3 flex flex-col justify-between gap-1.5">
+          <div
+            class="relative place-content-center h-full bg-white border border-white/20 p-6"
+          >
+            <div class="absolute right-0 top-0 w-4 h-4 bg-red-600"></div>
+            <p class="font-archimotov-bold text-6xl text-right">
+              Atnan Ari Anders0n
+            </p>
+            <div class="border my-1"></div>
+            <p class="font-archimotov text-3xl text-right">
+              Aspiring Mobile Developer
+            </p>
+          </div>
+          <div class="place-content-center">
+            <div class="grid grid-cols-4 gap-1.5">
+              <div
+                class="bg-white rounded-l-4xl transition-colors delay-75 hover:animate-bounce hover:bg-blue-800 hover:text-white place-content-baseline text-center border border-white/20 p-4"
+              >
+                <p class="font-archimotov not-sm:hidden">Linkedin ↗</p>
+              </div><div
+                class="bg-white rounded-r-4xl transition-colors hover:animate-bounce hover:bg-zinc-800 hover:text-white place-content-baseline text-center border border-white/20 p-4"
+              >
+                <p class="font-archimotov not-sm:hidden">Github ↗</p>
+              </div><div
+                class="bg-white rounded-l-4xl transition-colors delay-75 hover:animate-bounce hover:bg-pink-700 hover:text-white place-content-baseline text-center border border-white/20 p-4"
+              >
+                <p class="font-archimotov not-sm:hidden">Instagram ↗</p>
+              </div><div
+                class="bg-white rounded-r-4xl transition-colors delay-75 hover:animate-bounce hover:bg-blue-800 hover:text-white place-content-baseline text-center border border-white/20 p-4"
+              >
+                <p class="font-archimotov not-sm:hidden">Facebook ↗</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <!--Bio and Binary-->
-      <div class="flex gap-0.5 h-fit">
+      <div class="flex gap-1.5 h-fit">
         <div
           class="font-archimotov flex-2 text-xl lg:text-2xl text-right bg-white rounded-l-full border border-white/20 p-10"
         >
