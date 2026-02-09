@@ -4,99 +4,132 @@ import { Image } from "astro:assets";
 import profilePic from "../assets/photo.png";
 ---
 
-<div id="container">
-  <main class="pt-10">
-    <section id="card">
-      <h1>An Intr0duct1on</h1>
-    </section>
+<main class="pt-16 pb-24">
+  <section class="max-w-[1200px] mx-auto px-6 space-y-6">
 
-    <div
-      class="grid grid-rows-[auto_auto] gap-1.5 mx-10 md:mx-30 lg:mx-20 2xl:mx-70"
-    >
+    <!-- Intro Card -->
+    
+      <h1 class="font-dot text-5xl text-center tracking-wide">
+        An Intr0duct1on
+      </h1>
+   
+
+    <!-- Main Grid -->
+    <div class="grid grid-rows-[auto_auto] gap-1.5">
+
+      <!-- Image + Name -->
       <div class="flex gap-1.5 items-stretch">
-        <div
-          class="flex-1 bg-zinc-700 border border-white/20 rounded-tl-4xl overflow-hidden"
-        >
+
+        <!-- Image -->
+        <div class="flex-[1.2] bg-zinc-700 border border-white/20 rounded-tl-4xl overflow-hidden">
           <Image
             class="w-full h-full object-cover"
             src={profilePic}
             alt="Justatnann Profile Picture"
           />
         </div>
-        <div class="flex-3 flex flex-col justify-between gap-1.5">
-          <div
-            class="relative place-content-center h-full bg-white border border-white/20 p-6"
-          >
+
+        <!-- Right Content -->
+        <div class="flex-[2.8] flex flex-col gap-1.5">
+
+          <!-- Name Card -->
+          <div class="relative bg-white border border-white/20 p-6 flex flex-col justify-center  flex-1">
             <div class="absolute right-0 top-0 w-4 h-4 bg-red-600"></div>
-            <p class="font-archimotov-bold text-6xl text-right">
+
+            <p class="font-archimotov-bold text-4xl md:text-5xl lg:text-6xl text-right">
               Atnan Ari Anders0n
             </p>
-            <div class="border my-1"></div>
-            <p class="font-archimotov text-3xl text-right">
+
+            <div class="border my-2"></div>
+
+            <p class="font-archimotov text-xl md:text-2xl text-right">
               Aspiring Mobile Developer
             </p>
           </div>
-          <div class="place-content-center">
-            <div class="grid grid-cols-4 gap-1.5">
-              <div
-                class="bg-white rounded-l-4xl transition-colors delay-75 hover:animate-bounce hover:bg-blue-800 hover:text-white place-content-baseline text-center border border-white/20 p-4"
-              >
-                <p class="font-archimotov not-sm:hidden">Linkedin ↗</p>
-              </div><div
-                class="bg-white rounded-r-4xl transition-colors hover:animate-bounce hover:bg-zinc-800 hover:text-white place-content-baseline text-center border border-white/20 p-4"
-              >
-                <p class="font-archimotov not-sm:hidden">Github ↗</p>
-              </div><div
-                class="bg-white rounded-l-4xl transition-colors delay-75 hover:animate-bounce hover:bg-pink-700 hover:text-white place-content-baseline text-center border border-white/20 p-4"
-              >
-                <p class="font-archimotov not-sm:hidden">Instagram ↗</p>
-              </div><div
-                class="bg-white rounded-r-4xl transition-colors delay-75 hover:animate-bounce hover:bg-blue-800 hover:text-white place-content-baseline text-center border border-white/20 p-4"
-              >
-                <p class="font-archimotov not-sm:hidden">Facebook ↗</p>
-              </div>
+
+          <!-- Social Links -->
+          <div class="grid grid-cols-4 gap-1.5">
+            <div class="bg-white rounded-l-4xl  p-4 text-center hover:bg-blue-800 hover:text-white transition">
+              Linkedin ↗
+            </div>
+            <div class="bg-white rounded-r-4xl  p-4 text-center hover:bg-zinc-800 hover:text-white transition">
+              Github ↗
+            </div>
+            <div class="bg-white rounded-l-4xl  p-4 text-center hover:bg-pink-700 hover:text-white transition">
+              Instagram ↗
+            </div>
+            <div class="bg-white rounded-r-4xl  p-4 text-center hover:bg-blue-800 hover:text-white transition">
+              Facebook ↗
             </div>
           </div>
+
         </div>
       </div>
 
-      <!--Bio and Binary-->
-      <div class="flex gap-1.5 h-fit">
-        <div
-          class="font-archimotov flex-2 text-xl lg:text-2xl text-right bg-white rounded-l-full border border-white/20 p-10"
-        >
-          <p>
+      <!-- Bio + Binary -->
+      <div class="flex gap-1.5">
+
+        <div class="flex-[2] bg-white border border-white/20 rounded-l-full p-10 text-right">
+          <p class="font-archimotov text-lg md:text-xl leading-relaxed">
             Hello! I'm Atnan, a passionate mobile developer. I love creating
             innovative mobile applications that make a difference. When I'm not
             coding, you can find me exploring the latest tech trends or working
             on personal projects to sharpen my skills.
           </p>
-          <div>
-            <div></div>
-          </div>
         </div>
-        <div
-          class="font-archimotov flex-1 text-md lg:text-lg place-content-center text-center bg-white border border-white/20 rounded-br-4xl px-2"
-        >
-          "01101010 01110101 01110011 01110100 00100000 01100001 00100000
-          01100100 01100101 01110110 01100101 01101100 01101111 01110000
-          01100101 01110010 00100000 01110111 01100001 01101110 01101110
-          01100001 01100010 01100101"
+
+        <div id="binary-card" class=" cursor-pointer flex-[1] bg-white border border-white/20 rounded-br-4xl px-4 flex items-center text-center">
+          <p id="binary-text" class="font-archimotov text-center cursor-pointer text-sm md:text-base">
+            "01101010 01110101 01110011 01110100 00100000 01100001 00100000
+            01100100 01100101 01110110 01100101 01101100 01101111 01110000
+            01100101 01110010 00100000 01110111 01100001 01101110 01101110
+            01100001 01100010 01100101"
+          </p>
         </div>
+
       </div>
     </div>
+  </section>
+</main>
 
-    <style>
-      h1 {
-        font-family: "Dot";
-        font-size: 3rem;
+<script>
+  const el = document.getElementById("binary-text");
+  const card = document.getElementById("binary-card");
+  const oldText =  "\"01101010 01110101 01110011 01110100 00100000 01100001 00100000 01100100 01100101 01110110 01100101 01101100 01101111 01110000 01100101 01110010 00100000 01110111 01100001 01101110 01101110 01100001 01100010 01100101\"";
+
+  const finalText = "\"just a developer wannabe\"";
+
+  // Generate binary string of SAME length
+  const binaryText = finalText
+    .split("")
+    .map(c => (c === " " ? " " : Math.random() > 0.5 ? "0" : "1"))
+    .join("");
+
+  const chars = "01";
+  let interval = null;
+
+  function animate(target) {
+    clearInterval(interval);
+    let iterations = 0;
+
+    interval = setInterval(() => {
+      el.textContent = target
+        .split("")
+        .map((char, i) => {
+          if (char === " ") return " ";
+          if (i < iterations) return char;
+          return chars[Math.floor(Math.random() * chars.length)];
+        })
+        .join("");
+
+      if (iterations >= target.length) {
+        clearInterval(interval);
       }
 
-      main {
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-      }
-    </style>
-  </main>
-</div>
+      iterations += 0.5;
+    }, 30);
+  }
+
+  card.addEventListener("mouseenter", () => animate(finalText));
+  card.addEventListener("mouseleave", () => {clearInterval(interval); el.textContent = oldText;});
+</script>
