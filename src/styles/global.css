@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+.dot-overlay {
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 90px 90px;
+
+  /* MAGIC */
+  mix-blend-mode: difference;
+}
+
+@media (max-width: 768px) {
+  .dot-overlay {
+    mix-blend-mode: normal;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+  }
+}
+
 @theme {
   --font-dot: "Dot", monospace;
   --font-archimotov: "Archimotov", sans-serif;
@@ -28,4 +43,62 @@
   font-weight: bold;
   font-style: normal;
   font-display: swap;
+}
+
+@theme {
+  --animate-float: float 3s ease-in-out infinite;
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  --animate-float-4s: float 4s ease-in-out infinite;
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  --animate-float-4\.8s: float 4.8s ease-in-out infinite;
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  --animate-float-5\.6s: float 5.6s ease-in-out infinite;
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+html,
+body {
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* If you have a navbar, ensure it's full width */
+nav,
+header {
+  width: 100vw;
+  max-width: 100%;
 }

@@ -2,134 +2,130 @@
 import "../styles/global.css";
 import { Image } from "astro:assets";
 import profilePic from "../assets/photo.png";
+import dartSvg from "../assets/dart.svg";
+import flutterSvg from "../assets/flutter.svg";
+import javaScriptSvg from "../assets/javascript.svg";
+import tailWindSvg from "../assets/tailwind.svg";
 ---
 
-<main class="pt-16 pb-24">
-  <section class="max-w-[1200px] mx-auto px-6 space-y-6">
+<section
+  id="home"
+  class="w-full max-w-full overflow-x-hidden md:max-w-[1200px] md:mx-auto md:px-6 px-4 space-y-6 pt-12 md:pt-16 pb-24"
+>
+  <h1 class="font-dot text-3xl md:text-5xl text-center tracking-wide">
+    An Intr0duct1on
+  </h1>
 
-    <!-- Intro Card -->
-    
-      <h1 class="font-dot text-5xl text-center tracking-wide">
-        An Intr0duct1on
-      </h1>
-   
-
-    <!-- Main Grid -->
-    <div class="grid grid-rows-[auto_auto] gap-1.5">
-
-      <!-- Image + Name -->
-      <div class="flex gap-1.5 items-stretch">
-
-        <!-- Image -->
-        <div class="flex-[1.2] bg-zinc-700 border border-white/20 rounded-tl-4xl overflow-hidden">
-          <Image
-            class="w-full h-full object-cover"
-            src={profilePic}
-            alt="Justatnann Profile Picture"
-          />
-        </div>
-
-        <!-- Right Content -->
-        <div class="flex-[2.8] flex flex-col gap-1.5">
-
-          <!-- Name Card -->
-          <div class="relative bg-white border border-white/20 p-6 flex flex-col justify-center  flex-1">
-            <div class="absolute right-0 top-0 w-4 h-4 bg-red-600"></div>
-
-            <p class="font-archimotov-bold text-4xl md:text-5xl lg:text-6xl text-right">
-              Atnan Ari Anders0n
-            </p>
-
-            <div class="border my-2"></div>
-
-            <p class="font-archimotov text-xl md:text-2xl text-right">
-              Aspiring Mobile Developer
-            </p>
-          </div>
-
-          <!-- Social Links -->
-          <div class="grid grid-cols-4 gap-1.5">
-            <div class="bg-white rounded-l-4xl  p-4 text-center hover:bg-blue-800 hover:text-white transition">
-              Linkedin ↗
-            </div>
-            <div class="bg-white rounded-r-4xl  p-4 text-center hover:bg-zinc-800 hover:text-white transition">
-              Github ↗
-            </div>
-            <div class="bg-white rounded-l-4xl  p-4 text-center hover:bg-pink-700 hover:text-white transition">
-              Instagram ↗
-            </div>
-            <div class="bg-white rounded-r-4xl  p-4 text-center hover:bg-blue-800 hover:text-white transition">
-              Facebook ↗
-            </div>
-          </div>
-
-        </div>
+  <div class="w-full grid grid-rows-[auto_auto] gap-1.5">
+    <!-- Image + Name -->
+    <div class="w-full flex flex-col md:flex-row gap-1.5 items-stretch">
+      <!-- Image -->
+      <div
+        class="w-full md:flex-[1.2] bg-zinc-700 border border-white/20 rounded-3xl md:rounded-tl-4xl overflow-hidden"
+      >
+        <Image
+          class="w-full aspect-square md:aspect-auto md:h-full object-cover"
+          src={profilePic}
+          alt="Justatnann Profile Picture"
+        />
       </div>
 
-      <!-- Bio + Binary -->
-      <div class="flex gap-1.5">
+      <!-- Right Content -->
+      <div class="w-full md:flex-[2.8] flex flex-col gap-1.5">
+        <!-- Name Card -->
+        <div
+          class="relative w-full bg-white border border-white/20 p-5 md:p-6 flex flex-col justify-center flex-1 rounded-l-3xl rounded-br-3xl md:rounded-none"
+        >
+          <div
+            class="absolute right-0 top-0 md:right-0 md:top-0 w-4 h-4 bg-red-600"
+          >
+          </div>
 
-        <div class="flex-[2] bg-white border border-white/20 rounded-l-full p-10 text-right">
-          <p class="font-archimotov text-lg md:text-xl leading-relaxed">
-            Hello! I'm Atnan, a passionate mobile developer. I love creating
-            innovative mobile applications that make a difference. When I'm not
-            coding, you can find me exploring the latest tech trends or working
-            on personal projects to sharpen my skills.
+          <p
+            class="font-archimotov-bold text-2xl md:text-5xl lg:text-6xl text-center md:text-right px-2 md:px-0"
+          >
+            Atnan Ari Anders0n
+          </p>
+
+          <div class="border my-3 md:my-3 w-full"></div>
+
+          <p
+            class="font-archimotov text-base md:text-2xl text-center md:text-right px-2 md:px-0"
+          >
+            Aspiring Mobile Developer
           </p>
         </div>
 
-        <div id="binary-card" class=" cursor-pointer flex-[1] bg-white border border-white/20 rounded-br-4xl px-4 flex items-center text-center">
-          <p id="binary-text" class="font-archimotov text-center cursor-pointer text-sm md:text-base">
-            "01101010 01110101 01110011 01110100 00100000 01100001 00100000
-            01100100 01100101 01110110 01100101 01101100 01101111 01110000
-            01100101 01110010 00100000 01110111 01100001 01101110 01101110
-            01100001 01100010 01100101"
-          </p>
+        <!-- Social Links -->
+        <div
+          class="w-full grid grid-cols-2 gap-2 md:grid-cols-4 font-archimotov-bold text-sm md:text-lg"
+        >
+          <a
+            href="https://www.linkedin.com/in/atnan-ari-anderson-811346253"
+            class="bg-white rounded-4xl md:rounded-l-4xl p-4 text-center md:hover:bg-blue-800 md:hover:text-white md:transition"
+          >
+            Linkedin ↗
+          </a>
+          <a
+            href="https://github.com/Justatnann"
+            class="bg-white rounded-4xl md:rounded-r-4xl p-4 text-center md:hover:bg-zinc-800 md:hover:text-white md:transition"
+          >
+            Github ↗
+          </a>
+          <a
+            href="https://www.instagram.com/justatnann"
+            class="bg-white rounded-4xl md:rounded-l-4xl p-4 text-center md:hover:bg-pink-700 md:hover:text-white md:transition"
+          >
+            Instagram ↗
+          </a>
+          <a
+            href="https://www.facebook.com/atnan.arianderson/"
+            class="bg-white rounded-4xl md:rounded-r-4xl p-4 text-center md:hover:bg-blue-800 md:hover:text-white md:transition"
+          >
+            Facebook ↗
+          </a>
         </div>
-
       </div>
     </div>
-  </section>
-</main>
 
-<script>
-  const el = document.getElementById("binary-text");
-  const card = document.getElementById("binary-card");
-  const oldText =  "\"01101010 01110101 01110011 01110100 00100000 01100001 00100000 01100100 01100101 01110110 01100101 01101100 01101111 01110000 01100101 01110010 00100000 01110111 01100001 01101110 01101110 01100001 01100010 01100101\"";
+    <!-- Bio + Tech -->
+    <div class="w-full flex flex-col md:flex-row gap-1.5">
+      <!-- Bio -->
+      <div
+        class="w-full md:flex-2
+          bg-white border border-white/20
+          md:rounded-l-full
+          rounded-3xl
+          p-5 md:p-10
+          text-center md:text-right"
+      >
+        <p
+          class="font-archimotov text-sm md:text-xl leading-relaxed px-2 md:px-0"
+        >
+          Hello! I'm Atnan, a passionate mobile developer. I love creating
+          innovative mobile applications that make a difference. When I'm not
+          coding, you can find me exploring the latest tech trends or working on
+          personal projects to sharpen my skills.
+        </p>
+      </div>
 
-  const finalText = "\"just a developer wannabe\"";
-
-  // Generate binary string of SAME length
-  const binaryText = finalText
-    .split("")
-    .map(c => (c === " " ? " " : Math.random() > 0.5 ? "0" : "1"))
-    .join("");
-
-  const chars = "01";
-  let interval = null;
-
-  function animate(target) {
-    clearInterval(interval);
-    let iterations = 0;
-
-    interval = setInterval(() => {
-      el.textContent = target
-        .split("")
-        .map((char, i) => {
-          if (char === " ") return " ";
-          if (i < iterations) return char;
-          return chars[Math.floor(Math.random() * chars.length)];
-        })
-        .join("");
-
-      if (iterations >= target.length) {
-        clearInterval(interval);
-      }
-
-      iterations += 0.5;
-    }, 30);
-  }
-
-  card.addEventListener("mouseenter", () => animate(finalText));
-  card.addEventListener("mouseleave", () => {clearInterval(interval); el.textContent = oldText;});
-</script>
+      <!-- Tech -->
+      <div
+        class="w-full pt-3 md:pt-0 grid grid-cols-4 md:grid-cols-2 md:flex-1 gap-1.5 place-items-center"
+      >
+        <Image class="w-10 h-10 md:w-12 md:h-12" src={dartSvg} alt="Dart" />
+        <Image
+          class="w-10 h-10 md:w-12 md:h-12"
+          src={flutterSvg}
+          alt="Flutter"
+        />
+        <Image
+          class="w-10 h-10 md:w-12 md:h-12"
+          src={tailWindSvg}
+          alt="Tailwind"
+        />
+        <Image class="w-10 h-10 md:w-12 md:h-12" src={javaScriptSvg} alt="JS" />
+      </div>
+    </div>
+  </div>
+</section>

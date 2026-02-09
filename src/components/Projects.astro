@@ -1,0 +1,160 @@
+---
+const projects = [
+  {
+    title: "Company Profile Website — WordPress",
+    period: "Sep 2025 – Sep 2025",
+    org: "Universitas Internasional Batam",
+    description:
+      "Designed and developed a company profile website for a local business to support digital transformation and improve online presence.",
+    points: [
+      "Planned website structure and content architecture",
+      "Designed UI/UX aligned with brand identity",
+      "Developed the website using WordPress",
+      "Provided training for independent content management",
+    ],
+    skills: ["WordPress", "UI/UX", "Project Planning"],
+  },
+  {
+    title: "Healcation — Flutter Mobile App",
+    period: "Sep 2024 – May 2025",
+    org: "Universitas Internasional Batam",
+    description:
+      "A wellness-focused travel companion mobile app designed to help users discover and organize healing travel experiences.",
+    points: [
+      "Led collaborative team under ForgeSherpa",
+      "Designed app flow and UI/UX using Figma",
+      "Developed core features with Flutter and Dart",
+      "Oversaw feature integration",
+    ],
+    skills: ["Flutter", "Dart", "Figma", "Leadership"],
+  },
+  {
+    title: "Personal Website - Flutter Web",
+    period: "Sep 2024 - Dec 2024",
+    org: "Personal Project",
+    description: "First Website with Flutter Web.",
+    points: ["Implemented responsive design", "Optimized performance for web"],
+    skills: ["Flutter", "Dart"],
+  },
+  {
+    title: "Todo App — Flutter Mobile App",
+    period: "Mar 2024 – Apr 2024",
+    org: "Personal Project",
+    description:
+      "First Flutter project built to learn core mobile development concepts.",
+    points: [
+      "Implemented CRUD task functionality",
+      "Built clean and simple UI",
+    ],
+    skills: ["Flutter", "Dart"],
+  },
+  {
+    title: "Sales Manager and Product Tracking Website - Express.js",
+    period: "Sep 2023 - Nov 2023",
+    org: "Universitas Internasional Batam",
+    description:
+      "A simple web-based application designed to manage manufacturing products, developed as part of the preparation for the UIB Computer Science Expo. The system focuses on streamlining product tracking and management processes. Presented as part of the pre-expo requirement to demonstrate practical application skills",
+    points: [
+      "Built a functional CRUD system for managing product data",
+      "Implemented clean and minimalistic UI with dynamic interactivity using Alpine.js",
+      "Used DrizzleORM for type-safe, scalable database access",
+    ],
+    skills: [
+      "Express.js",
+      "Alpine.js",
+      "Database Design",
+      "Project Management",
+      "DrizzleORM",
+      "JavaScript",
+    ],
+  },
+  {
+    title: "Body Fits - Figma Design",
+    period: "Oct 2022 - Dec 2022",
+    org: "Universitas Internasional Batam",
+    description:
+      "Led a team the UI/UX role, collaborated with designers and developers to create an intuitive and visually engaging user experience. Conducted research, wireframing, and usability testing to enhance interface design. Focused on delivering a well-structured, functional, and user-friendly project that showcased both technical and design excellence.",
+    points: [
+      "Designed app flow and UI/UX using Figma",
+      "Conducted usability testing to refine user experience",
+    ],
+    skills: ["Figma", "UI/UX Design"],
+  },
+];
+---
+
+<section id="projects" class="bg-black py-24 px-6">
+  <h2
+    class="font-dot text-center text-4xl md:text-5xl tracking-[0.3em] text-white mb-20"
+  >
+    PROJECTS
+  </h2>
+
+  <div class="max-w-6xl mx-auto
+    columns-1 md:columns-2
+    gap-8">
+    {
+      projects.map((project) => (
+        <article
+          class="
+          break-inside-avoid
+          mb-8
+          relative p-8 rounded-2xl
+          bg-black
+          border border-white/20
+          text-white
+          transition-all duration-300
+          hover:-translate-y-1
+          hover:border-white
+          hover:shadow-[0_0_30px_rgba(255,255,255,0.35)]
+        "
+        >
+          {/* Neon glow layer */}
+          <div
+            class="
+            absolute inset-0 rounded-2xl
+            pointer-events-none
+            opacity-0
+            hover:opacity-100
+            transition-opacity duration-300
+            shadow-[0_0_60px_rgba(34,211,238,0.25)]
+          "
+          />
+
+          <p class="text-xs uppercase tracking-widest text-white mb-2">
+            {project.period}
+          </p>
+
+          <h3 class="font-archimotov-bold text-xl mb-1">{project.title}</h3>
+
+          <p class="text-sm opacity-60 mb-4">{project.org}</p>
+
+          <p class="text-sm leading-relaxed mb-4 text-white/80">
+            {project.description}
+          </p>
+
+          <ul class="list-disc list-inside text-sm space-y-1 mb-4 text-white/70">
+            {project.points.map((point) => (
+              <li>{point}</li>
+            ))}
+          </ul>
+
+          <div class="flex flex-wrap gap-2 mt-auto">
+            {project.skills.map((skill) => (
+              <span
+                class="
+                text-xs px-3 py-1 rounded-full
+                border border-white/40
+                text-white
+                shadow-[0_0_10px_rgba(34,211,238,0.25)]
+              "
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

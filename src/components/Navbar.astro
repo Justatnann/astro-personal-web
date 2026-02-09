@@ -1,31 +1,186 @@
-<nav class="sticky top-0 left-0 w-full p-4 bg-white border-b border-black z-10">
-  <div class="flex items-center space-x-3 text-center">
-    <div class="font-['Archimotov'] flex-1 text-2xl">
+<nav
+  class="sticky top-0 left-0 w-full p-4 bg-white/70 backdrop-blur-md border-b border-black z-50"
+>
+  <!-- Desktop Navigation -->
+  <div class="hidden md:flex items-center">
+    <div class="font-['Archimotov'] text-center text-xl flex-1">
       <a
         class="hover:underline hover:underline-offset-8 hover:decoration-dotted"
-        href="/">/Home</a
+        href="#home">/HOME</a
       >
     </div>
-    <div class="font-['Archimotov'] flex-1 text-2xl">
+
+    <div class="font-['Archimotov'] text-center text-xl flex-1">
       <a
         class="hover:underline hover:underline-offset-8 hover:decoration-dotted"
-        href="/about">/Experience</a
+        href="#experience">/Experience</a
       >
     </div>
-    <div class="flex-2">
-      <p class="font-['Archimotov-Bold'] text-3xl">./JUSTATNAN_</p>
+
+    <!-- Center Logo -->
+    <div class="flex-3 text-center">
+      <p class="font-['Archimotov-Bold'] text-2xl md:text-3xl">./JUSTATNAN_</p>
     </div>
-    <div class="font-['Archimotov'] flex-1 text-2xl">
+
+    <!-- Right Links -->
+
+    <div class="font-['Archimotov'] text-center text-xl flex-1">
       <a
         class="hover:underline hover:underline-offset-8 hover:decoration-dotted"
-        href="/projects">/Projects</a
+        href="#projects">/Projects</a
       >
     </div>
-    <div class="font-['Archimotov'] flex-1 text-2xl">
+
+    <div class="font-['Archimotov'] text-xl flex-1">
       <a
         class="hover:underline hover:underline-offset-8 hover:decoration-dotted"
-        href="/contact">/Contact</a
+        href="#contact">/Contact</a
       >
     </div>
   </div>
+
+  <!-- Mobile Navigation -->
+  <div class="flex md:hidden items-center justify-between">
+    <!-- Hamburger Menu Button -->
+    <button
+      id="menu-toggle"
+      class="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+      aria-label="Toggle menu"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Center Logo (Mobile) -->
+    <div class="absolute left-1/2 transform -translate-x-1/2">
+      <p class="font-['Archimotov-Bold'] text-2xl">./JUSTATNAN_</p>
+    </div>
+
+    <!-- Placeholder for alignment -->
+    <div class="w-10"></div>
+  </div>
+
+  <!-- Mobile Menu (Hidden by default) -->
+  <div
+    id="mobile-menu"
+    class="md:hidden fixed inset-0 top-16 transform -translate-x-full transition-transform duration-300 ease-in-out"
+  >
+    <div class="relative bg-white/50 flex flex-col p-6 space-y-6">
+      <a
+        href="#home"
+        class="font-['Archimotov'] text-2xl p-4 hover:bg-gray-100 rounded-lg transition-colors"
+        onclick="closeMenu()"
+      >
+        /Home
+      </a>
+      <a
+        href="#experience"
+        class="font-['Archimotov'] text-2xl p-4 hover:bg-gray-100 rounded-lg transition-colors"
+        onclick="closeMenu()"
+      >
+        /Experience
+      </a>
+      <a
+        href="#projects"
+        class="font-['Archimotov'] text-2xl p-4 hover:bg-gray-100 rounded-lg transition-colors"
+        onclick="closeMenu()"
+      >
+        /Projects
+      </a>
+      <a
+        href="#contact"
+        class="font-['Archimotov'] text-2xl p-4 hover:bg-gray-100 rounded-lg transition-colors"
+        onclick="closeMenu()"
+      >
+        /Contact
+      </a>
+    </div>
+
+    <!-- Close button for mobile menu -->
+    <a
+      onclick="closeMenu()"
+      class="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100"
+      aria-label="Close menu"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </a>
+  </div>
 </nav>
+
+<script>
+  // Simple menu toggle - put this in a separate .js file or at bottom of body
+  function setupMobileMenu() {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeBtn = document.getElementById("menu-close");
+    const body = document.body;
+
+    if (!menuToggle || !mobileMenu) return;
+
+    function toggleMenu() {
+      const isHidden = mobileMenu.classList.contains("-translate-x-full");
+      if (isHidden) {
+        mobileMenu.classList.remove("-translate-x-full");
+        body.classList.add("overflow-hidden");
+      } else {
+        mobileMenu.classList.add("-translate-x-full");
+        body.classList.remove("overflow-hidden");
+      }
+    }
+
+    menuToggle.addEventListener("click", toggleMenu);
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", toggleMenu);
+    }
+
+    // Close when clicking menu links
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("-translate-x-full");
+        body.classList.remove("overflow-hidden");
+      });
+    });
+
+    // Close on escape
+    document.addEventListener("keydown", (e) => {
+      if (
+        e.key === "Escape" &&
+        !mobileMenu.classList.contains("-translate-x-full")
+      ) {
+        mobileMenu.classList.add("-translate-x-full");
+        body.classList.remove("overflow-hidden");
+      }
+    });
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupMobileMenu);
+  } else {
+    setupMobileMenu();
+  }
+</script>
