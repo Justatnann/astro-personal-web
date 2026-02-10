@@ -93,9 +93,10 @@ html,
 body {
   width: 100%;
   scroll-behavior: smooth;
+}
+#page-content {
   overflow-x: hidden;
 }
-
 /* If you have a navbar, ensure it's full width */
 nav,
 header {

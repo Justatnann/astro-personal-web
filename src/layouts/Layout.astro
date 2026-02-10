@@ -8,8 +8,9 @@ import Navbar from "../components/Navbar.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+
+    <link rel="icon" type="image/x-icon" href="/logo.ico" />
     <meta name="generator" content={Astro.generator} />
     <title>Justatnann's Web</title>
   </head>
@@ -21,7 +22,7 @@ import Navbar from "../components/Navbar.astro";
       class="pointer-events-none fixed inset-0 z-10 dot-overlay"
     >
     </div>
-    <main>
+    <main id="page-content">
       <slot />
     </main>
   </body>

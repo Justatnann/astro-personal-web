@@ -21,7 +21,7 @@ import tailWindSvg from "../assets/tailwind.svg";
     <div class="w-full flex flex-col md:flex-row gap-1.5 items-stretch">
       <!-- Image -->
       <div
-        class="w-full md:flex-[1.2] bg-zinc-700 border border-white/20 rounded-3xl md:rounded-tl-4xl overflow-hidden"
+        class="relative z-40 w-full md:flex-[1.2] bg-zinc-700 border border-white/20 rounded-3xl md:rounded-tl-4xl overflow-hidden"
       >
         <Image
           class="w-full aspect-square md:aspect-auto md:h-full object-cover"
@@ -92,7 +92,7 @@ import tailWindSvg from "../assets/tailwind.svg";
     <div class="w-full flex flex-col md:flex-row gap-1.5">
       <!-- Bio -->
       <div
-        class="w-full md:flex-2
+        class="relative z-40 w-full md:flex-2
           bg-white border border-white/20
           md:rounded-l-full
           rounded-3xl
@@ -113,18 +113,26 @@ import tailWindSvg from "../assets/tailwind.svg";
       <div
         class="w-full pt-3 md:pt-0 grid grid-cols-4 md:grid-cols-2 md:flex-1 gap-1.5 place-items-center"
       >
-        <Image class="w-10 h-10 md:w-12 md:h-12" src={dartSvg} alt="Dart" />
         <Image
-          class="w-10 h-10 md:w-12 md:h-12"
+          class="w-10 h-10 md:w-12 md:h-12 animate-float"
+          src={dartSvg}
+          alt="Dart"
+        />
+        <Image
+          class="w-10 h-10 md:w-12 md:h-12 animate-float-4.8s"
           src={flutterSvg}
           alt="Flutter"
         />
         <Image
-          class="w-10 h-10 md:w-12 md:h-12"
+          class="w-10 h-10 md:w-12 md:h-12 animate-float-4s"
           src={tailWindSvg}
           alt="Tailwind"
         />
-        <Image class="w-10 h-10 md:w-12 md:h-12" src={javaScriptSvg} alt="JS" />
+        <Image
+          class="w-10 h-10 md:w-12 md:h-12 animate-float-5.6s"
+          src={javaScriptSvg}
+          alt="JS"
+        />
       </div>
     </div>
   </div>
