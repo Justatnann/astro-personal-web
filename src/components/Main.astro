@@ -18,13 +18,15 @@ import tailWindSvg from "../assets/tailwind.svg";
 
   <div class="w-full grid grid-rows-[auto_auto] gap-1.5">
     <!-- Image + Name -->
-    <div class="w-full flex flex-col md:flex-row gap-1.5 items-stretch">
+    <div
+      class="w-full flex flex-col md:flex-row gap-1.5 md:items-stretch flex items-center justify-center"
+    >
       <!-- Image -->
       <div
-        class="relative z-40 w-full md:flex-[1.2] bg-zinc-700 border border-white/20 rounded-3xl md:rounded-tl-4xl overflow-hidden"
+        class="relative z-40 w-90 md:50 md:flex-[1.2] bg-zinc-700 border border-white/20 rounded-3xl md:rounded-tl-4xl justify-center overflow-hidden"
       >
         <Image
-          class="w-full aspect-square md:aspect-auto md:h-full object-cover"
+          class="w-90 aspect-square md:aspect-auto md:h-110 object-cover object-top"
           src={profilePic}
           alt="Justatnann Profile Picture"
         />
