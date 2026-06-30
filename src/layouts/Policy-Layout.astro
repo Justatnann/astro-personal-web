@@ -1,0 +1,32 @@
+---
+// src/layouts/Policy-Layout.astro
+import "../styles/global.css";
+const { frontmatter } = Astro.props;
+---
+
+<html lang="en" class="bg-black text-white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="description" content={frontmatter.description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/x-icon" href="/logo.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{frontmatter.title}</title>
+  </head>
+  <body class="max-w-2xl mx-auto px-6 py-24 font-sans">
+    <a
+      href="/"
+      class="text-xs uppercase tracking-[0.2em] opacity-40 hover:opacity-100 transition-opacity"
+    >
+      ← Back Home
+    </a>
+
+    <article
+      class="mt-16 prose prose-invert prose-headings:font-semibold prose-headings:tracking-tighter prose-p:leading-relaxed max-w-none"
+    >
+      <slot />
+    </article>
+  </body>
+</html>

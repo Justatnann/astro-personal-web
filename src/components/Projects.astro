@@ -1,13 +1,27 @@
 ---
-
 import ProjectCard from "./Project-Card.astro";
 const projects = [
+  {
+    title: "Camoid — Kotlin Android App",
+    period: "April 2026 – June 2026",
+    description:
+      "Developed an Android utility application that transforms a mobile device into a high-quality studio camera and virtual webcam for a PC using low-latency local Wi-Fi transmission.",
+    skills: [
+      "Kotlin",
+      "Jetpack Compose",
+      "MediaCodec",
+      "UDP Streaming",
+      "Android Development",
+    ],
+    imageLink: "camoid.png",
+    privacyLink: "/policies/camoid-policies", // Tambahkan ini
+  },
   {
     title: "Company Profile Website — WordPress",
     period: "Sep 2025 – Sep 2025",
     description:
       "Designed and developed a company profile website for a local business to support digital transformation and improve online presence.",
-   
+
     skills: ["WordPress", "UI/UX", "Project Planning"],
     imageLink: "ngtech.png",
   },
@@ -16,9 +30,10 @@ const projects = [
     period: "Sep 2024 – May 2025",
     description:
       "A wellness-focused travel companion mobile app designed to help users discover and organize healing travel experiences.",
-   
+
     skills: ["Flutter", "Dart", "Figma", "Leadership"],
     imageLink: "healcation.jpeg",
+    githubLink: "https://github.com/forgesherpa/Healcation", // Tambahkan ini
   },
   {
     title: "Personal Website - Flutter Web",
@@ -26,6 +41,7 @@ const projects = [
     description: "First Website with Flutter Web.",
     skills: ["Flutter", "Dart"],
     imageLink: "web.jpeg",
+    githubLink: "https://github.com/justatnann/personal-web", // Tambahkan ini
   },
   {
     title: "Todo App — Flutter Mobile App",
@@ -34,6 +50,7 @@ const projects = [
       "First Flutter project built to learn core mobile development concepts.",
     skills: ["Flutter", "Dart"],
     imageLink: "todo.png",
+    githubLink: "https://github.com/justatnann/flutter-todo", // Tambahkan ini
   },
   {
     title: "Sales Manager and Product Tracking Website - Express.js",
@@ -49,13 +66,14 @@ const projects = [
       "JavaScript",
     ],
     imageLink: "batamnest.jpeg",
+    githubLink: "https://github.com/justatnann/21batamnest-project",
   },
   {
     title: "Body Fits - Figma Design",
     period: "Oct 2022 - Dec 2022",
     description:
       "Led a team the UI/UX role, collaborated with designers and developers to create an intuitive and visually engaging user experience. Conducted research, wireframing, and usability testing to enhance interface design. Focused on delivering a well-structured, functional, and user-friendly project that showcased both technical and design excellence.",
-  
+
     skills: ["Figma", "UI/UX Design"],
     imageLink: "bodi.jpeg",
   },
@@ -64,17 +82,16 @@ const projects = [
 
 <section id="projects" class="bg-black py-24 px-6">
   <div class="max-w-6xl mx-auto">
-  <h2
-    class="font-dot text-center text-4xl md:text-5xl tracking-[0.3em] text-white mb-20"
-  >
-    PROJECTS
-  </h2>
+    <h2
+      class="font-dot text-center text-4xl md:text-5xl tracking-[0.3em] text-white mb-20"
+    >
+      PROJECTS
+    </h2>
 
-  <div class="max-w-6xl mx-auto columns-1 md:columns-2 gap-8 space-y-8 justify-items-center">
- 
-        <ProjectCard project={projects}></ProjectCard>
-    
-    
+    <div
+      class="max-w-6xl mx-auto columns-1 md:columns-2 gap-8 space-y-8 justify-items-center"
+    >
+      <ProjectCard project={projects} />
+    </div>
   </div>
-  </div>  
 </section>

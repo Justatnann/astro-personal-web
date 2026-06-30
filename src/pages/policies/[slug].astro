@@ -1,0 +1,19 @@
+---
+import { getCollection, render } from "astro:content";
+import PolicyLayout from "../../layouts/Policy-Layout.astro";
+
+export async function getStaticPaths() {
+  const policies = await getCollection("policies");
+  return policies.map((entry) => ({
+    params: { slug: entry.id.replace(/\.md$/, "") },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<PolicyLayout frontmatter={entry.data}>
+  <div class="prose prose-invert"><Content /></div>
+</PolicyLayout>
